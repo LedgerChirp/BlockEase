@@ -76,7 +76,7 @@ function login() {
             </div>
             <div className="mx-auto my-auto">
               <button
-                onClick={() => signIn("facebook")}
+                onClick={() => signIn("github")}
                 className="rounded-full p-6 bg-[#DCEAF8] hover:bg-cyan-50 hover:ease-in-out"
               >
                 <svg
@@ -96,7 +96,10 @@ function login() {
           </div>
           <p className="mt-40 ml-3">
             Don't have a account?{" "}
-            <a href="/" className="text-cyan-900 hover:text-blue-700">
+            <a
+              href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp"
+              className="text-cyan-900 hover:text-blue-700"
+            >
               Create One
             </a>{" "}
           </p>
