@@ -25,7 +25,7 @@ function login() {
             </svg> */}
             <p className="font-bold ml-10 text-xl">← Back to Home</p>
           </a>
-          <h1 className="font-bold text-4xl my-10 ml-72">Login</h1>
+          <h1 className="font-bold text-4xl my-10 ml-16 lg:ml-72">Login</h1>
           <div className="grid grid-rows-3">
             <div className="mx-auto my-auto">
               <button
