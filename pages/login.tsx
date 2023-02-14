@@ -1,12 +1,14 @@
 import React from "react";
 import { signIn } from "next-auth/react";
+import Front from "../components/Landing/Front";
+import Mid from "./../components/Landing/Mid";
 
 function login() {
 	return (
-		<>
-			<h1>Login</h1>
-			<button onClick={() => signIn("google")}>sign in</button>
-		</>
+		<div className="overflow-hidden scrollbar-hide">
+			<Front />
+			<Mid />
+		</div>
 	);
 }
 
