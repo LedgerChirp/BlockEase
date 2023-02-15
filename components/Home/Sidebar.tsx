@@ -6,7 +6,7 @@ function Sidebar() {
 		<>
 			<div className="">
 				{svgs.map((items) => (
-					<button>{items.svg_path}</button>
+					<button key={items.id}>{items.svg_path}</button>
 				))}
 			</div>
 		</>
