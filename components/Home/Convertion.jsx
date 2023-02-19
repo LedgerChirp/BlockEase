@@ -19,6 +19,7 @@ function Convertion() {
 
 	const convertionopp = () => {
 		send == 0 ? setEth(money / price) : setMoney(eth * price);
+		send == 0 ? setMoney(0) : setEth(0);
 	};
 	return (
 		<>
