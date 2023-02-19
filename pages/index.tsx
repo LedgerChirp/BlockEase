@@ -7,14 +7,16 @@ import Graph from "../components/Home/Graph";
 import Convertion from "../components/Home/Convertion";
 import Profile from "./../components/Dashboard/Profile";
 
+
 const Home: NextPage = () => {
-	const { data: session } = useSession();
-	return (
-		<>
-			<Head>
-				<title>LedgerChirp Home</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+  const { data: session } = useSession();
+  return (
+    <>
+      <Head>
+        <title>BlockEase</title>
+        <link rel="icon" type="image/png" href="../public/favicon-32x32.png" />
+      </Head>
+
 
 			{session && (
 				<>
@@ -42,19 +44,19 @@ const Home: NextPage = () => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ req }: any) => {
-	const session = await getSession({ req });
+  const session = await getSession({ req });
 
-	if (!session) {
-		return {
-			redirect: {
-				destination: "/login",
-				permanent: false,
-			},
-		};
-	}
-	return {
-		props: {},
-	};
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
 };
 
 export default Home;
