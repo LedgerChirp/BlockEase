@@ -15,7 +15,7 @@ function authenticate() {
 							<button
 								onClick={() =>
 									signIn("google", {
-										callbackUrl: "/",
+										callbackUrl: "https://block-ease.vercel.app/",
 									})
 								}
 								className="rounded-full p-6 bg-[#DCEAF8] hover:bg-cyan-50 hover:ease-in-out"
@@ -64,7 +64,11 @@ function authenticate() {
 						</div>
 						<div className="mx-auto my-auto">
 							<button
-								onClick={() => signIn("github", { callbackUrl: "/" })}
+								onClick={() =>
+									signIn("github", {
+										callbackUrl: "https://block-ease.vercel.app/",
+									})
+								}
 								className="rounded-full p-6 bg-[#DCEAF8] hover:bg-cyan-50 hover:ease-in-out"
 							>
 								<svg

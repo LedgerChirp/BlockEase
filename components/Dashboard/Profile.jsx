@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 
 function Profile({ mailid, name, img }) {
 	const [acc, setAcc] = useState(null);
@@ -12,9 +13,11 @@ function Profile({ mailid, name, img }) {
 			});
 		setAcc(accounts);
 	};
+	connect();
+
 	return (
 		<>
-			<div className="h-auto flex items-center mx-auto w-[90%] py-4">
+			<div className="h-auto lg:h-[100%] flex items-center mx-auto w-[90%] py-4">
 				<div className="bg-[#DCEAF8] flex items-center mx-auto md:h-[20rem] py-10 rounded-3xl grow">
 					<div className="mx-auto text-center">
 						<Image
@@ -26,7 +29,10 @@ function Profile({ mailid, name, img }) {
 						/>
 						<h2 className="text-2xl font-bold mt-4">{name}</h2>
 						{acc ? (
-							<h2 className="text-sm font-medium mt-2">ID : {acc[0]}</h2>
+							<div className="mx-auto flex items-center flex-col">
+								<h2 className="text-sm font-medium mt-2">ID : {acc?.[0]}</h2>
+								<QRCodeSVG value={acc?.[0]} size={200} includeMargin={true} />
+							</div>
 						) : (
 							<button
 								onClick={() => connect()}
