@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Customize scrollbar styles */
 /* For Firefox */
 .scrollbar-track {
@@ -31,4 +32,10 @@
 
 ::-webkit-scrollbar-thumb:active {
   background-color: #444;
+
+
+@layer components {
+	.wrapper-container {
+		@apply max-w-5xl mx-auto px-2;
+	}
 }
