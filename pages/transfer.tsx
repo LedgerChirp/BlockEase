@@ -1,3 +1,5 @@
+import { GetServerSideProps } from "next";
+import { getSession } from "next-auth/react";
 import React from "react";
 import Convertion from "../components/Home/Convertion";
 import QR from "../components/Home/Qr";
@@ -26,5 +28,21 @@ function transfer() {
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }: any) => {
+	const session = await getSession({ req });
+
+	if (!session) {
+		return {
+			redirect: {
+				destination: "/login",
+				permanent: false,
+			},
+		};
+	}
+	return {
+		props: {},
+	};
+};
 
 export default transfer;

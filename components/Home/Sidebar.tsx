@@ -8,7 +8,7 @@ function Sidebar() {
 	const router = useRouter();
 	return (
 		<>
-			<div className="flex flex-col space-y-8 w-fit bg-[#DCEAF8] rounded-full h-[80vh]">
+			<div className="flex flex-col space-y-8 w-fit bg-[#DCEAF8] rounded-full h-[80vh] ml-2">
 				{svgs.map((items) => (
 					<button className="flex justify-center" key={items.id}>
 						<Link href={items.link}>
