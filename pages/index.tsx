@@ -1,6 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { getSession, signOut, useSession } from "next-auth/react";
+import "../styles/globals.css"
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
