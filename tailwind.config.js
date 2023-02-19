@@ -7,6 +7,7 @@ module.exports = {
 	],
 	theme: {
 		extend: {},
+		'correct_blue': '#DCEAF8',
 	},
 	plugins: [require("tailwind-scrollbar-hide")],
 };

@@ -24,6 +24,7 @@ function transfer() {
 						<Convertion />
 					</div>
 				</div>
+
 			</div>
 		</>
 	);
