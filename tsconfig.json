@@ -26,6 +26,6 @@
 		"public/1.ts",
 		"components/Home/TransferMoney.jsx",
 		"components/Home/Convertion.jsx"
-	],
+, "components/Home/Qr.jsx"	],
 	"exclude": ["node_modules"]
 }
