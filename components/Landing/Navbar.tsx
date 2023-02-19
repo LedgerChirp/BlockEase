@@ -6,6 +6,7 @@ function Navbar() {
 	const nav = [
 		{ name: "Home", link: "/" },
 		{ name: "About", link: "#about" },
+		{name: "Contact Us", link: ""}
 	];
 	return (
 		<>
