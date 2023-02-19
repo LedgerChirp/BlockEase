@@ -13,7 +13,11 @@ function authenticate() {
 					<div className="grid grid-rows-3">
 						<div className="mx-auto my-auto">
 							<button
-								onClick={() => signIn("google")}
+								onClick={() =>
+									signIn("google", {
+										callbackUrl: "/",
+									})
+								}
 								className="rounded-full p-6 bg-[#DCEAF8] hover:bg-cyan-50 hover:ease-in-out"
 							>
 								<svg
@@ -60,7 +64,7 @@ function authenticate() {
 						</div>
 						<div className="mx-auto my-auto">
 							<button
-								onClick={() => signIn("github")}
+								onClick={() => signIn("github", { callbackUrl: "/" })}
 								className="rounded-full p-6 bg-[#DCEAF8] hover:bg-cyan-50 hover:ease-in-out"
 							>
 								<svg
