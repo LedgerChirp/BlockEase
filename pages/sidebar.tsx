@@ -20,7 +20,7 @@ const sidebar = () => {
           <span className="slider round"></span>
         </label> */}
         <button
-          className="mx-auto my-5 hover:bg-black p-2 rounded-full"
+          className="mx-auto my-5 hover:bg-black px-3 py-0.5 rounded-full"
           onClick={changeColor}
           key={1}
         >

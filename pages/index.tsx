@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>LedgerChirp Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>BlockEase</title>
+        <link rel="icon" type="image/png" href="../public/favicon-32x32.png" />
       </Head>
 
       {session && (
