@@ -4,7 +4,7 @@ function Last() {
 	return (
 		<>
 			<div className="w-[100vw] h-[100vh] items-center flex flex-col">
-				<div className="my-auto space-y-8 w-[50vw]">
+				<div className="my-auto space-y-8 w-[100vw] md:w-[50vw]">
 					<h2 className="font-bold text-5xl text-center">Contact Us</h2>
 					<form className="grid grid-cols-1 space-y-6">
 						<input
