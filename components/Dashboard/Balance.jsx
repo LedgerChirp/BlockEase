@@ -36,7 +36,7 @@ function Balance() {
 		const bal = await window.ethereum
 			.request({
 				method: "eth_getBalance",
-				params: [acc[0], "latest"],
+				params: [acc?.[0], "latest"],
 			})
 			.catch((err) => {
 				console.log(err);
@@ -46,12 +46,14 @@ function Balance() {
 	balance();
 	return (
 		<>
-			<div className="flex flex-col pt-48 sm:pt-0 items-center mx-auto">
-				<h2>Available Balance</h2>
-				<h2 className="font-bold text-2xl">
-					&#x24; {price * money} / {money} &#x2666; ETH
-				</h2>
-			</div>
+			{acc && (
+				<div className="flex flex-col pt-48 sm:pt-0 items-center mx-auto">
+					<h2>Available Balance</h2>
+					<h2 className="font-bold text-2xl">
+						&#x24; {price * money} / {money} &#x2666; ETH
+					</h2>
+				</div>
+			)}
 		</>
 	);
 }
